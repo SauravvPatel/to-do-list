@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>To-Do List</h1>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode">🌞</button>
+        </header>
+        <div class="motivation-line">
+            <span id="motivational-quote">✨ Every task completed is a step toward your goals!</span>
+        </div>
+        <form id="task-form" autocomplete="off">
+            <input type="text" id="task-input" placeholder="Add a new task..." required>
+            <button type="submit" class="add-btn">Add</button>
+        </form>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+    </div>
+    <div id="congrats-modal" class="congrats-modal" style="display:none;">
+        <div class="congrats-content">
+            <span class="congrats-emoji">🎉</span>
+            <div class="congrats-message">Congratulations! Task completed!</div>
+            <button id="close-congrats" class="close-congrats">OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
